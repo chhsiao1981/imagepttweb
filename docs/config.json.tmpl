@@ -1,12 +1,12 @@
 {
     "Bind": ["tcp:0.0.0.0:4567"],
-    "BoarddAddress": "",
-    "SearchAddress": "",
-    "MandAddress": "",
-    "MemcachedAddress": "",
-    "TemplateDirectory": "",
-    "StaticPrefix": "",
-    "SitePrefix": "",
+    "BoarddAddress": "boardd",
+    "SearchAddress": "searchd",
+    "MandAddress": "mand",
+    "MemcachedAddress": "memcached",
+    "TemplateDirectory": "/static",
+    "StaticPrefix": "/bbs",
+    "SitePrefix": "https://ptt.devptt.site",
 
     "MemcachedMaxConn": 10,
 
@@ -26,7 +26,7 @@
 
     "RecaptchaSiteKey": "",
     "RecaptchaSecret": "",
-    "CaptchaInsertSecret": "",
+    "CaptchaInsertSecret": "captcha_secret",
     "CaptchaExpireSecs": 600,
     "CaptchaRedisConfig": {
         "Addr": "pttredis:6379",
