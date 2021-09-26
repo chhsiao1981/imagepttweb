@@ -14,7 +14,9 @@ WORKDIR /srv
 RUN git clone https://github.com/ptt/pttweb.git
 
 WORKDIR /srv/pttweb
-RUN protoc --proto_path=proto --go_out=. --go_opt=Mman/man.proto="proto/man" --go-grpc_out=proto --go-grpc_opt=Mman/man.proto="github.com/ptt/pttweb/proto/man;man" man/man.proto && \
+RUN go get github.com/golang/protobuf@v1.5.2 && \
+    go get google.golang.org/grpc@v1.41.0 && \
+    protoc --proto_path=proto --go_out=. --go_opt=Mman/man.proto="proto/man" --go-grpc_out=proto --go-grpc_opt=Mman/man.proto="github.com/ptt/pttweb/proto/man;man" man/man.proto && \
     protoc --proto_path=proto --go_out=. --go_opt=Mapi/board.proto="proto/api" --go-grpc_out=proto --go-grpc_opt=Mapi/board.proto="github.com/ptt/pttweb/proto/api;api" api/board.proto && \
     go build
 
