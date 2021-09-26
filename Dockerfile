@@ -19,7 +19,7 @@ RUN go get github.com/golang/protobuf@v1.5.2 && \
     go build
 
 COPY docs/config.json.tmpl /etc/pttweb/config.json
-COPY docs/static.tmpl /srv/pttweb/static
+COPY docs/static.tmpl /etc/pttweb/static
 
 # cmd
 WORKDIR /srv/pttweb
