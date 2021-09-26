@@ -1,0 +1,10 @@
+version: '2.2'
+services:
+  pttredis:
+    image: redis:6.0.9-alpine
+    restart: always
+  pttweb:
+    image: imagepttweb:dockerfile
+    ports:
+      - "127.0.0.1:4567:4567"
+    restart: always
