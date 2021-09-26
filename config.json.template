@@ -1,0 +1,37 @@
+{
+    "Bind": ["0.0.0.0:4567"],
+    "BoarddAddress": "",
+    "SearchAddress": "",
+    "MandAddress": "",
+    "MemcachedAddress": "",
+    "TemplateDirectory": "",
+    "StaticPrefix": "",
+    "SitePrefix": "",
+
+    "MemcachedMaxConn": 10,
+
+    "GAAccount": "",
+    "GADomain": "",
+
+    "EnableOver18Cookie": true,
+
+    // EnableLinkOriginalInAllPost indicates whether to parse the board name in
+    // ALLPOST board and link to original posts.
+    "EnableLinkOriginalInAllPost": true,
+
+    "FeedPrefix": "/feed",
+    "AtomFeedTitleTemplate": "",
+
+    "EnablePushStream": false,
+    "PushStreamSharedSecret": "",
+    "PushStreamSubscribeLocation": "",
+
+    "RecaptchaSiteKey": "",
+    "RecaptchaSecret": "",
+    "CaptchaInsertSecret": "",
+    "CaptchaExpireSecs": 600,
+    "CaptchaRedisConfig": {
+        "Addr": "pttredis:6379",
+        "Password": ""
+    }
+}
