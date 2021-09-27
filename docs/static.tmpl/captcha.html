@@ -9,7 +9,7 @@
     <p>Verification: {{.VerificationKey}}</p>
     {{else}}
     <form action="{{.PostAction}}" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LfMtZEcAAAAAGDiUaUobGeNKm86lsHGHmGDbiVl"></div>
+      <div class="g-recaptcha" data-sitekey="{{.RecaptchaSiteKey}}"></div>
       <br/>
       <input type="submit" value="Submit">
     </form>
