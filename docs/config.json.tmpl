@@ -1,0 +1,35 @@
+{
+    "Bind": ["tcp:0.0.0.0:4567"],
+    "BoarddAddress": "boardd",
+    "SearchAddress": "searchd",
+    "MandAddress": "mand",
+    "MemcachedAddress": "memcached",
+    "TemplateDirectory": "/etc/pttweb/static",
+    "StaticPrefix": "/bbs",
+    "SitePrefix": "https://www.devptt.site",
+
+    "MemcachedMaxConn": 10,
+
+    "GAAccount": "",
+    "GADomain": "",
+
+    "EnableOver18Cookie": true,
+
+    "EnableLinkOriginalInAllPost": true,
+
+    "FeedPrefix": "/feed",
+    "AtomFeedTitleTemplate": "",
+
+    "EnablePushStream": false,
+    "PushStreamSharedSecret": "",
+    "PushStreamSubscribeLocation": "",
+
+    "RecaptchaSiteKey": "recaptcha_key",
+    "RecaptchaSecret": "recaptcha_secret",
+    "CaptchaInsertSecret": "captcha_secret",
+    "CaptchaExpireSecs": 600,
+    "CaptchaRedisConfig": {
+        "Addr": "pttredis:6379",
+        "Password": ""
+    }
+}
