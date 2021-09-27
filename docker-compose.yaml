@@ -4,7 +4,7 @@ services:
     image: redis:6.0.9-alpine
     restart: always
   pttweb:
-    image: imagepttweb:dockerfile
+    image: imagepttweb:v0.1.0
     ports:
       - "127.0.0.1:4567:4567"
     volumes:
