@@ -1,1 +1,19 @@
-{{define "ROOT"}}<html>captcha{{.}}</html>{{end}}
+{{define "ROOT"}}
+<html>
+  <head>
+    <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    {{if .VerificationKey }}
+    <p>Verification: {{.VerificationKey}}</p>
+    {{else}}
+    <form action="{{.PostAction}}" method="POST">
+      <div class="g-recaptcha" data-sitekey="6LfMtZEcAAAAAGDiUaUobGeNKm86lsHGHmGDbiVl"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+    {{end}}
+  </body>
+</html>
+{{end}}
