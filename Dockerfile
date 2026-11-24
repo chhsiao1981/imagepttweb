@@ -1,10 +1,10 @@
-FROM golang:1.16-buster
+FROM golang:1.25-bookworm
 
 ENV GOROOT=/usr/local/go
 ENV PATH=${PATH}:/usr/local/go/bin
 
 RUN apt update && apt install -y protobuf-compiler && \
-    go install google.golang.org/protobuf/cmd/protoc-gen-go@latest && \
+    go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26.0 && \
     go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
 
 # pttweb
